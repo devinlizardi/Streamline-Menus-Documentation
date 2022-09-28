@@ -20,7 +20,16 @@ Because there was a finite list of dietary preferences we offered the user to fi
 
 ![Image of filter buttons](https://github.com/devinlizardi/Streamline-Menus-Documentation/blob/main/assets/Screenshot%202022-08-26%20111620.png)
 
-Finally, all we had to do here was filter the rendered content on the page based on which state was active, and it was working quickly.
+Finally, all we had to do was create a state object `selectedDiet` that held which diet the user had selected (default being 'all'), and compare against the `diet` field of each menu item. I implemented a variation of the following JSX:
+```
+// apply filter to array of elements
+const menuFiltered = menuItems.filter(item => item.diet === selectedDiet)
+
+// ...and eventually
+<ul>
+  {menuFiltered.map(item => <li key={item._id}> { item.name } </li>)}
+<ul/>
+```
 
 To solve the functionality of a each item being swipeable from a list, we used the [react-swipeable-list](https://www.npmjs.com/package/react-swipeable-list) npm package, which integrated well with some CSS configuration, and we were good to go.
 
