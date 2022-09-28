@@ -12,7 +12,7 @@ These sketches were used in the intial process meeting. I joined the project aft
 ## Technical Details
 
 ### Front end
-The side of the project I worked on was built in React, with a Node runtime using Express, grabbing data from an atlast MongoDB.
+The side of the project I worked on was built in React, with a Node runtime using Express, grabbing data from an Atlas MongoDB.
 
 Page navigation used `BroswerRouter` from [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start) for performance, and so we could raise state objects to a high-enough level. The real challenge came further down, where we needed to create a tagging system for each item of food on the menu so that we could filter by various dietary preferences.
 
